@@ -1,6 +1,9 @@
 resource "aws_sqs_queue" "deadletter_queue" {
   name                       = "${var.instance.name}_deadletter.fifo"
   fifo_queue                 = true
+
+  kms_master_key_id          = var.instance.kms
+  
   message_retention_seconds  = 1209600
 }
 
