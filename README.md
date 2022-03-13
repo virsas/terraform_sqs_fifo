@@ -1,10 +1,10 @@
-# tfmod_sqs_fifo
+# terraform_sqs_fifo
 
 Terraform module to create FIFO sqs queue.
 
 ## Dependencies
 
-KMS <https://github.com/virsas/tfmod_kms>
+KMS <https://github.com/virsas/terraform_kms>
 
 ## Terraform example
 
@@ -23,7 +23,7 @@ variable "sqsexample" {
 }
 
 module "sqs_example" {
-  source = "github.com/virsas/tfmod_sqs_fifo"
+  source = "github.com/virsas/terraform_sqs_fifo"
   instance = var.sqsexample
   // id of the kms key created in different module. This key is then used to encrypt the messages.
   kms = module.kms_sqs.id
