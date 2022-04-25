@@ -1,3 +1,7 @@
+provider "aws" {
+  region = var.region
+}
+
 resource "aws_sqs_queue" "deadletter_queue" {
   name                       = "${var.instance.name}_deadletter.fifo"
   fifo_queue                 = true
