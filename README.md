@@ -4,7 +4,7 @@ Terraform module to create FIFO sqs queue.
 
 ## Dependencies
 
-KMS <https://github.com/virsas/terraform_kms>
+- KMS <https://github.com/virsas/terraform_kms>
 
 ## Terraform example
 
