@@ -23,7 +23,7 @@ variable "sqsexample" {
 }
 
 module "sqs_example" {
-  source = "github.com/virsas/terraform_sqs_fifo"
+  source = "git::https://github.com/virsas/terraform_sqs_fifo.git?ref=v1.0.0"
   instance = var.sqsexample
   // id of the kms key created in different module. This key is then used to encrypt the messages.
   kms = module.kms_sqs.id
